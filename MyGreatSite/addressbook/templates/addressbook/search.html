@@ -1,0 +1,9 @@
+{% if filtered_contacts %}
+	<ul>
+	{% for contact in filtered_contacts %}
+		<li><a href="/book/index/{{ contact.pk }}/">{{ contact.fname }} {{ contact.lname }}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No Cotacts with that Search Query.</p>
+{% endif %}
